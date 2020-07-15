@@ -12,13 +12,12 @@ class Login extends Component<any, any>{
             name: '',
             submitted: false
         }
-
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleChange(e){
         const {name, value} = e.target
-        this.setState({[name]: value})
+        this.setState({[name]: value})//[name] = 글짜가 많은 것을 뜻함.
     }
     handleSubmit(e){
         e.preventDefault()
@@ -42,7 +41,7 @@ class Login extends Component<any, any>{
                 <div className="container">
                     <label htmlFor="uname"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username"
-                           name="userid" value={userid}
+                           name="userid" value={userid} //userid의 네임이 키값이 된다!
                            onChange={this.handleChange}
                     />
                     { submitted && !userid &&
@@ -70,10 +69,14 @@ class Login extends Component<any, any>{
         </div>
     }
 }
-function mapStateToProps(state) {
-    const { loggingIn } = state.userReducers
+function mapStateToProps(s) {
+    const { loggingIn } = s.userReducers
     return { loggingIn}
 }
+// function mapDispatcherToProps(s) {
+//     const { loggingIn } = s.userReducers
+//     return { loggingIn}
+// }
 const actionCreators = {
     login: userActions.login
 }
