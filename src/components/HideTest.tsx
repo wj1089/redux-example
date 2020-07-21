@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import SignTest from "../SigninTest";
+import SignTest from "./SigninTest";
 
 
 const HideTest:React.FC = () => {
