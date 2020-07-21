@@ -11,10 +11,9 @@ import SignTest from "./components/SigninTest";
 import HideTest from "./components/HideTest";
 import CounterComponent from "./counter/CounterComponent";
 import CounterContainer from "./counter/CounterContainer";
-import TodoContainer from "./todos/TodosContainer";
 
 const App = () => <div className="App">
-  <TodoContainer/>
+  <CounterContainer/>
 </div>
 
 export default App;
