@@ -4,6 +4,7 @@ const DECRESE = 'counter/DECREASE'
 
 export const increase = createAction(INCRESE)
 export const decrease = createAction(DECRESE)
+// const test = () => {return{type:DECRESE}}
 
 const initialState = {
     number: 0
